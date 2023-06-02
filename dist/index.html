@@ -1,460 +1,277 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Freelancer - Start Bootstrap Theme</title>
+        <meta name="description" content="Plníme přání těm, kteří si je sami splnit nemohou" />
+        <meta name="keywords" content="nadejenakolech, nadeje, na, kolech, sanitka, prani, nemoc, StichtingAmbulanceWens, ceskarepublika, cesko, pomahame, plnimeprani, jsmetuprovas, zdravotnik, dobrovolnik, nevylecitelny, terminalni, imobilni, paliativni, rodina, stichting, ambulance" />
+        <meta name="author" content="Petr Sečkář" />
+        <meta name="creator" content="Naděje na kolech, z.ú." />
+        <meta name="format-detection" content="telephone=no">
+        <meta name="color-scheme" content="only light">
+        <title>Naděje na kolech</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="shortcut icon" href="assets/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+        <link rel="manifest" href="assets/site.webmanifest">
         <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/fontface.css" rel="stylesheet" />
     </head>
     <body id="page-top">
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v13.0" nonce="ARPKCd3D"></script>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+                <img class="navbar-brand" src="assets/img/logo.jpg" alt="Naděje na kolech" href="#page-top" height="80"/>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#intro"><span lang="cs">Úvod</span><span lang="en">Introduction</span></a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about"><span lang="cs">O nás</span><span lang="en">About us</span></a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#wishes"><span lang="cs">Přání</span><span lang="en">Wishes</span></a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#donate"><span lang="cs">Podpora</span><span lang="en">Support</span></a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact"><span lang="cs">Kontakt</span><span lang="en">Contact us</span></a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <button class="btn nav-link py-3 px-0 px-lg-3 rounded" lang="cs" onclick="localize('en')"><img style="width:30px;" src="assets/img/gb.svg" alt="English" /></button>
+                            <button class="btn nav-link py-3 px-0 px-lg-3 rounded" lang="en" onclick="localize('cs')"><img style="width:30px;" src="assets/img/cz.svg" alt="Česky" /></button>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead bg-primary text-white text-center">
-            <div class="container d-flex align-items-center flex-column">
+        <header class="masthead text-secondary text-center">
+            <!-- <div class="container d-flex align-items-center flex-column"> -->
                 <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />
-                <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0">Start Bootstrap</h1>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
+                <!-- <img class="masthead-avatar mb-5" src="assets/img/logo.jpg" alt=""/> -->
                 <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Graphic Artist - Web Designer - Illustrator</p>
-            </div>
+                <!-- <p class="masthead-subheading font-weight-light mb-0">
+                    <span lang="cs">Naděje na kolech</span>
+                    <span lang="en">Hope on Wheels</span>
+                </p> -->
+            <!-- </div> -->
         </header>
-        <!-- Portfolio Section-->
-        <section class="page-section portfolio" id="portfolio">
+        <!-- intro Section-->
+        <section class="page-section mb-0" id="intro">
             <div class="container">
-                <!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+                <!-- intro Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary">
+                    <span lang="cs">Naděje na kolech</span>
+                    <span lang="en">Hope on Wheels</span>
+                </h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
                     <div class="divider-custom-line"></div>
                 </div>
-                <!-- Portfolio Grid Items-->
-                <div class="row justify-content-center">
-                    <!-- Portfolio Item 1-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/cabin.png" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 2-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/cake.png" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 3-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/circus.png" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 4-->
-                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/game.png" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 5-->
-                    <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/safe.png" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 6-->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/submarine.png" alt="..." />
-                        </div>
-                    </div>
+                <!-- intro Section Content-->
+                <div class="row">
+                    <p class="lead text-center">
+                        <span lang="cs">Jsme nezisková organizace, která si klade za cíl umožnit nevyléčitelně nemocnému, imobilnímu pacientovi paliativní péče vyrazit na výlet do přírody, na kulturní památku, sportovní akci, koncert oblíbeného hudebníka či divadelní představení. Navštívit rodinu, oblíbené místo nebo kolegy v práci. Ještě jednou cítit vůni lesa, vidět západ Slunce,  naposledy na sebe nechat padat kapky letního deště či sněhové vločky.</span>
+                        <span lang="en">TODO</span>    
+                    </p>
                 </div>
             </div>
         </section>
-        <!-- About Section-->
-        <section class="page-section bg-primary text-white mb-0" id="about">
+        <!-- about Section-->
+        <section class="page-section bg-primary project text-white" id="about">
             <div class="container">
-                <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+                <!-- about Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white mb-0">
+                    <span lang="cs">O nás</span>
+                    <span lang="en">About us</span>
+                </h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
                     <div class="divider-custom-line"></div>
                 </div>
-                <!-- About Section Content-->
                 <div class="row">
-                    <div class="col-lg-4 ms-auto"><p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p></div>
-                    <div class="col-lg-4 me-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
-                </div>
-                <!-- About Section Button-->
-                <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/theme/freelancer/">
-                        <i class="fas fa-download me-2"></i>
-                        Free Download!
-                    </a>
+                    <div class="col-lg-12 ms-auto">
+                        <div lang="cs">
+                            <p class="lead justify">
+                                Inspirovali jsme se u nizozemské <a class="white" href="https://www.ambulancewens.nl/" target="_blank">Stichting Ambulance Wens</a>, která byla založena již v roce 2007 panem Keesem Veldboerem starším, tatínkem současného ředitele nadace. Jeho myšlenka se rozšířila do celého světa a v roce 2022 dorazila i k nám, do České republiky, a to pod názvem Sanitka Přání.<br/><br/>
+                                Díky zkušenostem z české "sanitky" a stáže v Nizozemsku vznikla na počátku roku 2023 organizace Naděje na kolech, z.ú. .<br/><br/>
+                                Realizace přání probíhá pomocí speciálně vyvinutého vozidla, vybaveného mimo jiného i vzduchovým podvozkem pro co největší pohodlí během cesty, elektrickým lehátkem, tlumeným osvětlením a ozvučení interiéru, plně prosklenou zadní částí pro snadný výhled a mnoho dalšího. Ve vozidle je k dispozici základní občerstvení.
+                            </p>
+                            <!-- <div class="alert alert-primary d-flex align-items-center" role="alert">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                                    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                  </svg>                                <div>
+                                    Warning text
+                                </div>
+                            </div> -->
+                        </div>
+                        <div lang="en">
+                            <p class="lead justify">
+                                TODO
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <!-- Contact Section-->
-        <section class="page-section" id="contact">
+        <!-- wishes Section-->
+        <section class="page-section mb-0" id="wishes">
             <div class="container">
-                <!-- Contact Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+                <!-- wishes Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary">
+                    <span lang="cs">Přání</span>
+                    <span lang="en">Wishes</span>
+                </h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
                     <div class="divider-custom-line"></div>
                 </div>
-                <!-- Contact Section Form-->
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 col-xl-7">
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                            <!-- Name input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                <label for="name">Full name</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                            </div>
-                            <!-- Email address input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                                <label for="email">Email address</label>
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                            </div>
-                            <!-- Phone number input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                                <label for="phone">Phone number</label>
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                            </div>
-                            <!-- Message input-->
-                            <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                                <label for="message">Message</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                            </div>
-                            <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
-                                    <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                                </div>
-                            </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                            <!-- Submit Button-->
-                            <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Send</button>
-                        </form>
-                    </div>
+                <!-- wishes Section Content-->
+                <div class="row">
+                    <p class="lead text-center">
+                        <span lang="cs">Dáváme naději, že se ještě jednou podaří navštívit vysněné místo či událost, a to každému klientovi pouze jednou. Služba je poskytována bezplatně, pro klienta a jednu osobu doprovodu, včetně případného vstupného a podobných poplatků. Klienta může doprovázet více osob, ale pouze ve vlastní režii. Klient musí absolvovat cestu výhradně na lůžku. </span>
+                        <span lang="en">TODO</span>    
+                    </p>
                 </div>
+                <div class="row">
+                    <p class="lead text-center">
+                        <span lang="cs">Níže naleznete odkaz na formulář, po jehož vyplnění vás budeme kontaktovat a domluvíme detaily přání. </span>
+                        <span lang="en">TODO - If you have a wish for a patient, please complete the intake form.</span>    
+                    </p>
+                    <p class="text-center" lang="cs">
+                        <button class="btn btn-primary" id="btnForm" type="button" data-bs-toggle="collapse" data-bs-target="#wishCollapse" aria-expanded="false" aria-controls="wishCollapse" value="open" onclick="changeText()">
+                            <span lang="cs">Mám zájem o přání</span>
+                            <span lang="en">Request a wish</span>    
+                        </button>   
+                    </p>
+                <div class="row collapse" id="wishCollapse">
+                    <iframe lang="cs" src="https://docs.google.com/forms/d/e/1FAIpQLSfLhFPFInPrasVYbqX7xHOihzO1rbcDpn5MatLCY1jylma7NQ/viewform?embedded=true" width="640" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>        
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- Donate Section-->
+        <section class="page-section bg-primary text-white" id="donate">
+            <div class="container">
+                <!-- Donate Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white mb-0">
+                    <span lang="cs">Podporují nás</span>
+                    <span lang="en">Supporting us</span>
+                </h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Donate Section Form-->                   
+                <div class="row">
+                    <div class="col-lg-12 ms-auto text-center">
+                        <p class="lead">
+                            <span lang="cs">Podpořit nás můžete buď finančně, a to příspěvkem na <a class="white" href="https://ib.fio.cz/ib/transparent?a=2402567703" target="_blank">transparentní účet</a> 2402567703/2010 vedený u Fio banka a.s., nebo jako dobrovolník. 
+                                Pro více informací nás <a href="#contact">kontaktujte</a>.</span>
+                                <span lang="en">If you would like to support the project by any amount you can by transfer it to the <a class="white" href="https://ib.fio.cz/ib/transparent?a=2402567703" target="_blank">transparent account</a> 2402567703/2010 (bank Fio banka a.s.) or join us as volunteer.</span>
+                        </p>
+                        <p><img style="width:300px;" src="assets/img/qrcode.svg"></p>
+                    </div>
+                </div>      
+                <div class="row">
+                    <div class="col-lg-12 ms-auto text-center">
+                        <p class="lead">
+                            <span lang="cs">Potvrzení o poskytnutí daru nejsou vystavována automaticky. Pro vystavení potvrzení či smlouvy nás kontaktujte na e-mailu <a class="white" href="mailto:nadejenakolech@gmail.com">nadejenakolech@gmail.com</a></span>
+                            <span lang="en">TODO</span>
+                        </p>
+                    </div>
+                </div>              
             </div>
         </section>
         <!-- Footer-->
-        <footer class="footer text-center">
+        <footer class="footer text-center" id="contact">
             <div class="container">
                 <div class="row">
                     <!-- Footer Location-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Location</h4>
-                        <p class="lead mb-0">
-                            2215 John Daniel Drive
-                            <br />
-                            Clark, MO 65243
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">
+                            <span lang="cs">Kontakt</span>
+                            <span lang="en">Contact</span>
+                        </h4>
+                        <p>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+420739059492">+420 739 059 492</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:nadejenakolech@gmail.com">nadejenakolech@gmail.com</a>
+                        </p>
+                        <p>
+                            Naděje na kolech, z.ú.<br/>
+                            Tyršova 377, 664 17 Tetčice<br/>
+                            IČ: 19350945<br/>
+                        </p>
+                        <p>
+                            <span lang="cs">Transparentní účet:</span>
+                            <span lang="en">Transparent account:</span>
+                            2402567703/2010
+                        </p>
+                        <p>
+                            <a href="https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=1204529&typ=UPLNY" target="_blank" rel="noopener noreferrer"><span lang="cs">Kompletní výpis z rejstříku ústavů</span><span lang="en">Complete info in database of institutes (Czech only)</span></a>
                         </p>
                     </div>
                     <!-- Footer Social Icons-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Around the Web</h4>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">
+                            <span lang="cs">Najdete nás na</span>
+                            <span lang="en">Follow us on</span>
+                        </h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/nadeje.nakolech" target="_blank"><i class="fab fa-fw fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/nadejenakolech/" target="_blank"><i class="fab fa-fw fa-instagram"></i></a>
+                        <!-- <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/company/xxx/" target="_blank"><i class="fab fa-fw fa-linkedin-in"></i></a> -->
                     </div>
-                    <!-- Footer About Text-->
-                    <div class="col-lg-4">
-                        <h4 class="text-uppercase mb-4">About Freelancer</h4>
-                        <p class="lead mb-0">
-                            Freelance is a free to use, MIT licensed Bootstrap theme created by
-                            <a href="http://startbootstrap.com">Start Bootstrap</a>
-                            .
-                        </p>
-                    </div>
+
                 </div>
             </div>
         </footer>
         <!-- Copyright Section-->
         <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright &copy; Your Website 2023</small></div>
-        </div>
-        <!-- Portfolio Modals-->
-        <!-- Portfolio Modal 1-->
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Log Cabin</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cabin.png" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 2-->
-        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tasty Cake</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cake.png" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 3-->
-        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Circus Tent</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/circus.png" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 4-->
-        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Controller</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/game.png" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 5-->
-        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Locked Safe</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/safe.png" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 6-->
-        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Submarine</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="container">
+                <small>Copyright © nadejenakolech.cz 2022<br>
+                    Website source code hosted on <a href="https://github.com/pseckar/hope-on-wheels" target="_blank">GitHub<small>
+                </small></a><small>
+                    
             </div>
         </div>
         <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>

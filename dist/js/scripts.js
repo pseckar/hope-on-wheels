@@ -1,6 +1,6 @@
 /*!
-* Start Bootstrap - Freelancer v7.0.7 (https://startbootstrap.com/theme/freelancer)
-* Copyright 2013-2023 Start Bootstrap
+* Start Bootstrap - Freelancer v7.0.5 (https://startbootstrap.com/theme/freelancer)
+* Copyright 2013-2021 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
 */
 //
@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', event => {
     if (mainNav) {
         new bootstrap.ScrollSpy(document.body, {
             target: '#mainNav',
-            rootMargin: '0px 0px -40%',
+            offset: 72,
         });
     };
 
@@ -52,3 +52,29 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+function localize(language){
+  if (['cs','en'].includes(language)) {
+    let lang = ':lang(' + language + ')';
+    let hide = '[lang]:not(' + lang + ')';
+    document.querySelectorAll(hide).forEach(function (node) {
+      node.style.display = 'none';
+    });
+    let show = '[lang]' + lang;
+    document.querySelectorAll(show).forEach(function (node) {
+      node.style.display = 'unset';
+    });
+  }
+}
+
+function changeText(){
+    var elem = document.getElementById("btnForm");
+    if (elem.value =="open"){
+        elem.innerHTML = "\<span lang=\"cs\"\>Skrýt formulář\<\/span\>\<span lang=\"en\"\>Hide the form\<\/span\>";
+        elem.value = "closed";
+    }
+    else {
+        elem.innerHTML = "\<span lang=\"cs\"\>Mám zájem o přání\<\/span\>\<span lang=\"en\"\>Request a wish\<\/span\>";
+        elem.value = "open";
+    }
+}
